@@ -1,0 +1,881 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Goomo site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: orange;
+  }
+  .high{
+    margin-top: -40px;
+  }
+  .h1c{
+    
+    color: black;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+    
+
+ 
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background: #2f294f;
+  margin: 0;
+}
+ .modal-header,  .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+
+
+
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .fimg{
+    width: 40px;
+    height: 40px;
+    
+
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0.5;
+      transform: translateY(60%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  a{
+    color: black;
+    margin-left: 20px;
+  }
+  footer{
+    color: black;
+    background:linear-gradient(lightblue,lightblue);
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand high" href="#myPage"><img src="logo.png" width="100px" height="100px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <canvas id="canvas"></canvas>
+
+  <h1 style="margin-top: -500px" class="h1c">Reise</h1> 
+  <p>Leading Software Development Company</p> 
+  <form>
+    <div class="input-group">
+      <!--<input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>!-->
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid" style="background: linear-gradient(lightblue,red)">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Reise</h2><br>
+      <h4><p>Reise is a leading global Web development,Graphic design company.We harness the power of Cloud Computing,Firebase to help our clients adapt to the digital world and make them successful.A company recognised globally for its comprehensive portfolio of services,strong commitment to sustainability and good corporate citizenship.Together we discover ideas and connect the dots to build a better and a bold new future</p></h4>
+      
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey" style="background: linear-gradient(grey,lightblue,violet)">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> The mission of Reise is the core of Reise.There are our values.It is about who we are.It is our character.It is reflected consistently in all our behaviour.The spirit is deeply rooted in the unchanging essence of Reise </h4><br>
+      <h4><strong>VALUES:</strong> <ul>
+        <li>Be passionate about clients success</li>
+        <li>Be global and responsible</li>
+        <li>Treat each person with respect</li>
+        <li>Unyielding integrity in everything we do</li>
+
+      </ul></p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center" style="background: linear-gradient(lightblue,violet,grey)">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\service5.jpg" style="width: 130px;height: 130px">
+      <h4>WEB DESIGN</h4>
+      
+    </div>
+    <div class="col-sm-4">
+     <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\service1.jpg" style="width: 130px;height: 130px">
+      <h4>WEB DEVELOPMENT</h4>
+      
+    </div>
+    <div class="col-sm-4">
+       <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\service4.jpg" style="width: 130px;height: 130px">
+      <h4>SEARCH ENGINE OPTIMISATION</h4>
+      
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+       <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\service2.png" style="width: 130px;height: 130px">
+      <h4>E-COMMERCE WEBSITE </h4>
+     
+    </div>
+    <div class="col-sm-4">
+      <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\service3.jpg" style="width: 130px;height: 130px">
+      <h4>PORTAL DEVELOPMENT SYSTEM</h4>
+      
+    </div>
+    <div class="col-sm-4">
+     <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\service6.jpg" style="width: 130px;height: 130px">
+      <h4 style="color:#303030;">WEB ANALYTICS</h4>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey" style="background: linear-gradient(grey,orange,violet)">
+  <h2>Portfolio</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\portfolio.jpg" alt="Socks" width="400" height="300">
+        <p><strong>New Trend</strong></p>
+        <p>New Trend to wear Socks and Sandals </p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\portfolio1.jpg" alt="Tutorials" width="400" height="300">
+        <p><strong>Tutorials</strong></p>
+        <p>Tutorials for web development</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\portfolio2.jpg" alt="Application" width="400" height="300">
+        <p><strong>Application</strong></p>
+        <p>Versatile application for all purpose</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Sundar pichai, CEO <br> Google</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!! it's fantabulous"<br><span>Bill Gates , Founder <br> Microsoft</span></h4>
+      </div>
+      <div class="item">
+        <h4>"This company will be the top most company in future.Congrats!! "<br><span>Jeff Bezos , CEO <br> Amazon </span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid" style="background: linear-gradient(lightblue,purple,grey)">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Rs.1000</strong> Design</p>
+          <p><strong>Rs.2000</strong> Development</p>
+          <p><strong>Rs.1500</strong> Hosting</p>
+          <p><strong>Rs.1000</strong> Promotion</p>
+          <p><strong>Simple</strong> Website</p>
+        </div>
+        <div class="panel-footer">
+          <h3>Rs.5500</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Rs.1500</strong> Design</p>
+          <p><strong>Rs.3000</strong> Development</p>
+          <p><strong>Rs.2500</strong> Hosting</p>
+          <p><strong>Rs.2000</strong> Promotion</p>
+          <p><strong>Ineffable</strong> Websites</p>
+        </div>
+        <div class="panel-footer">
+          <h3>Rs.6500</h3>
+          <h4>per month</h4>
+           <button class="btn btn-lg" data-toggle="modal" data-target="#myModal1">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Rs.2000</strong> Design</p>
+          <p><strong>Rs.4000</strong> Development</p>
+          <p><strong>Rs.3000</strong> Hosting</p>
+          <p><strong>Rs.2500</strong> Promotion</p>
+          <p><strong>Marvellous</strong> Websites</p>
+        </div>
+        <div class="panel-footer">
+          <h3>Rs.11,500</h3>
+          <h4>per month</h4>
+           <button class="btn btn-lg" data-toggle="modal" data-target="#myModal2">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <p> Basic Plan</p>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="username"> Name</label>
+              <input type="text" class="form-control" id="Username" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Id</label>
+              <input type="text" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="pass1">Password</label>
+              <input type="password" class="form-control" id="pass1" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+              <label for="pass2">Confirm Password</label>
+              <input type="password" class="form-control" id="pass2" placeholder="Confirm Your password">
+            </div>
+            <div class="form-group">
+              
+              <a href="basic.html" class="btn btn-danger" role="button" style="margin-left: -2px">submit</a>
+             
+           </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal" formaction="C:\Users\User\Desktop\computer science\projects\REISE Project\basic.html">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <p> Pro Plan</p>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="username"> Name</label>
+              <input type="text" class="form-control" id="Username" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Id</label>
+              <input type="text" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="pass1">Password</label>
+              <input type="password" class="form-control" id="pass1" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+              <label for="pass2">Confirm Password</label>
+              <input type="password" class="form-control" id="pass2" placeholder="Confirm Your password">
+            </div>
+              <a href="pro.html" class="btn btn-danger" role="button" style="margin-left: -2px">submit</a>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <p> Premium Plan</p>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="username"> Name</label>
+              <input type="text" class="form-control" id="Username" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Id</label>
+              <input type="text" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="pass1">Password</label>
+              <input type="password" class="form-control" id="pass1" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+              <label for="pass2">Confirm Password</label>
+              <input type="password" class="form-control" id="pass2" placeholder="Confirm Your password">
+            </div>
+            <a href="premium.html" class="btn btn-danger" role="button" style="margin-left: -3px">submit</a>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid " style="background: linear-gradient(purple,violet,grey)">
+  <h2 class="text-center" style="color: black">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5" style="color: black">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Coimbatore, Tamilnadu</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 9245178728</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> mycompany@reise.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <br>
+        <div class="col-sm-6 form-group" style="margin-right: 300px">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p style="float: right">Designed By Mohamed Askar</p>
+  <p style="margin-top: -50px;float: left"><b>Support Us On</b></p>
+ <a href="www.facebook.com" style="float: left"><img class="fimg" src="C:\Users\User\Desktop\DCIM\fb.jpeg"></a>
+ <a href="www.twitter.com" style="float: left"><img class="fimg" src="C:\Users\User\Desktop\DCIM\twitter.jpeg"></a>
+</footer>
+
+<script>
+
+  var canvas = document.getElementById('canvas'),
+  context = canvas.getContext('2d'),
+  canvasWidth = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth),
+  canvasHeight = (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight),
+  requestAnimationFrame = window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
+var persons = [],
+  numberOfFirefly = 30,
+  birthToGive = 25;
+
+var colors = [];
+/* Galactic Tea - http://www.colourlovers.com/palette/1586746/Galactic_Tea*/
+colors[2] = [];
+colors[2]['background'] = '#2F294F';
+colors[2][1] = 'rgba(74,49,89,';
+colors[2][2] = 'rgba(130,91,109,';
+colors[2][3] = 'rgba(185,136,131,';
+colors[2][4] = 'rgba(249,241,204,';
+
+var colorTheme = 2, //getRandomInt(0,colors.length-1);
+  mainSpeed = 1;
+
+function getRandomInt(min, max, exept) {
+  var i = Math.floor(Math.random() * (max - min + 1)) + min;
+  if (typeof exept == "undefined") return i;
+  else if (typeof exept == 'number' && i == exept) return getRandomInt(min, max, exept);
+  else if (typeof exept == "object" && (i >= exept[0] && i <= exept[1])) return getRandomInt(min, max, exept);
+  else return i;
+}
+
+function isEven(n) {
+  return n == parseFloat(n) ? !(n % 2) : void 0;
+}
+
+function degToRad(deg) {
+  return deg * (Math.PI / 180);
+}
+
+function Firefly(id) {
+  this.id = id;
+  this.width = getRandomInt(3, 6);
+  this.height = this.width;
+  this.x = getRandomInt(0, (canvas.width - this.width));
+  this.y = getRandomInt(0, (canvas.height - this.height));
+  this.speed = (this.width <= 10) ? 2 : 1;
+  this.alpha = 1;
+  this.alphaReduction = getRandomInt(1, 3) / 1000;
+  this.color = colors[colorTheme][getRandomInt(1, colors[colorTheme].length - 1)];
+  this.direction = getRandomInt(0, 360);
+  this.turner = getRandomInt(0, 1) == 0 ? -1 : 1;
+  this.turnerAmp = getRandomInt(1, 2);
+  this.isHit = false;
+  this.stepCounter = 0;
+  this.changeDirectionFrequency = getRandomInt(1, 200);
+  this.shape = 2; //getRandomInt(2,3);
+  this.shadowBlur = getRandomInt(5, 25);
+}
+
+Firefly.prototype.stop = function() {
+  this.update();
+}
+
+Firefly.prototype.walk = function() {
+  var next_x = this.x + Math.cos(degToRad(this.direction)) * this.speed,
+    next_y = this.y + Math.sin(degToRad(this.direction)) * this.speed;
+
+  // Canvas limits
+  if (next_x >= (canvas.width - this.width) && (this.direction < 90 || this.direction > 270)) {
+    next_x = canvas.width - this.width;
+    this.direction = getRandomInt(90, 270, this.direction);
+  }
+  if (next_x <= 0 && (this.direction > 90 && this.direction < 270)) {
+    next_x = 0;
+    var exept = [90, 270];
+    this.direction = getRandomInt(0, 360, exept);
+  }
+  if (next_y >= (canvas.height - this.height) && (this.direction > 0 && this.direction < 180)) {
+    next_y = canvas.height - this.height;
+    this.direction = getRandomInt(180, 360, this.direction);
+  }
+  if (next_y <= 0 && (this.direction > 180 && this.direction < 360)) {
+    next_y = 0;
+    this.direction = getRandomInt(0, 180, this.direction);
+  }
+
+  this.x = next_x;
+  this.y = next_y;
+
+  this.stepCounter++;
+
+  if (this.changeDirectionFrequency && this.stepCounter == this.changeDirectionFrequency) {
+    this.turner = this.turner == -1 ? 1 : -1;
+    this.turnerAmp = getRandomInt(1, 2);
+    this.stepCounter = 0;
+    this.changeDirectionFrequency = getRandomInt(1, 200);
+  }
+
+  this.direction += this.turner * this.turnerAmp;
+
+  this.update();
+}
+
+Firefly.prototype.takeOppositeDirection = function() {
+  // Right -> Left
+  if ((this.direction >= 0 && this.direction < 90) || (this.direction > 270 && this.direction <= 360)) {
+    this.direction = getRandomInt(90, 270);
+    return;
+  }
+  // Left -> Right
+  if (this.direction > 90 && this.direction < 270) {
+    var exept = [90, 270];
+    this.direction = getRandomInt(0, 360, exept);
+    return;
+  }
+  // Down -> Up
+  if (this.direction > 0 && this.direction < 180) {
+    this.direction = getRandomInt(180, 360);
+    return;
+  }
+  // Up -> Down
+  if (this.direction > 180) {
+    this.direction = getRandomInt(0, 180);
+  }
+}
+
+Firefly.prototype.update = function() {
+
+  context.beginPath();
+
+  context.fillStyle = this.color + this.alpha + ")";
+  context.arc(this.x + (this.width / 2), this.y + (this.height / 2), this.width / 2, 0, 2 * Math.PI, false);
+  context.shadowColor = this.color + this.alpha + ")";
+  context.shadowBlur = this.shadowBlur;
+  context.shadowOffsetX = 0;
+  context.shadowOffsetY = 0;
+  context.fill();
+
+  if (this.id > 15) {
+    this.alpha -= this.alphaReduction;
+    if (this.alpha <= 0) this.die();
+  }
+
+}
+
+Firefly.prototype.die = function() {
+  persons[this.id] = null;
+  delete persons[this.id];
+}
+
+window.onload = function() {
+  canvas.setAttribute('width', canvasWidth);
+  canvas.setAttribute('height', canvasHeight);
+
+  start();
+}
+
+function start() {
+  instantiatePopulation();
+  animate();
+}
+
+function instantiatePopulation() {
+  var i = 0;
+  while (i < numberOfFirefly) {
+    persons[i] = new Firefly(i);
+    i++;
+  }
+}
+
+function animate() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  context.beginPath();
+
+  // Création d'une copie de l'array persons
+  persons_order = persons.slice(0);
+  // Tri par ordre de position sur l'axe y (afin de gérer les z-index)
+  persons_order.sort(function(a, b) {
+    return a.y - b.y
+  });
+
+  // Paint les instances dans l'ordre trié
+  for (var i in persons_order) {
+    var u = persons_order[i].id;
+    persons[u].walk();
+  }
+
+  requestAnimationFrame(animate);
+}
+
+canvas.onclick = function(e) {
+  giveBirth(e, birthToGive);
+}
+
+function giveBirth(e, u) {
+  var i = persons.length;
+  persons[i] = new Firefly(i);
+  persons[i].x = e.layerX;
+  persons[i].y = e.layerY;
+
+  if (u > 1) giveBirth(e, u - 1);
+}
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>

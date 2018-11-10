@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Goomo site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body{
+font-family:   "Lato", sans-serif;
+  }
+  
+   .col{
+    background: linear-gradient(orange,pink);
+    width: 100%;
+    height: 300px;
+   }
+   .j1{
+    
+    margin-top: -30px;
+    width:100%;
+    height: 700px;
+    background: linear-gradient(grey,orange);
+    color: black;
+   }
+   .fimg{
+    width: 40px;
+    height: 40px;
+    
+
+  }
+   .j2{
+    margin-top: -30px;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(violet,purple);
+    color:black;
+   }
+   img{
+    width: 400px;
+    height: 400px;
+    margin-left: 30px;
+   }
+   .nav{
+        width: 90%;
+        margin-left: 900px;
+        padding: 10px;
+        margin-top: -30px;
+    }
+    .nav>a{
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: black;
+    }
+    .nav>a:hover{
+        border-bottom: 1px solid black;
+        transition: ease-in 0.7s;
+    }
+   .high{
+    margin-top: -40px;
+  }
+  .bimg{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-left: 20px;
+    margin-top: -70px;
+
+  }
+  footer{
+    width: 100%;
+    height: 100px;
+      background: linear-gradient(lightblue,orange);
+    color: black;
+    margin-top: -10px;
+  }
+</style>
+ <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+   <div class="jumbotron col">
+    <a href="C:\Users\User\Desktop\computer science\projects\REISE Project\index2.html"><img src="C:\Users\User\Desktop\computer science\projects\REISE Project\logo.png" class="bimg"></a>
+    <div class="nav">
+            <a href="C:\Users\User\Desktop\computer science\projects\REISE Project\index2.html" class="active">Home</a>
+            <a href="#bd">Pro Plan</a>
+            <a href="#rform">Requirement</a>
+            
+        </div>
+
+     <h1 style="text-align: center;font-size: 30px">PRO PLAN DETAILS</h1>
+   </div>
+   <div class="jumbotron j1">
+    <h2 style="margin-left: 30px;color: blue" id="bd">DETAILS ABOUT THE PRO PLAN</h2>
+     <h3 style="margin-left: 30px;line-height: 1.4em">Pro plan is that which provides a very good and attractive websites which have somedesigns which looks with a fabulous front end and forms will be connected to backend.This plan cost very low compared to premium plan.Free templates are also available and you can also upload your own template for the web development.</h3>
+      <h3 style="margin-left: 30px;">SAMPLE TEMPLATES</h3><br>
+      <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\pimg.webp">
+      <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\pimg1.webp">
+      <img src="C:\Users\User\Desktop\computer science\projects\REISE Project\pimg2.webp">
+   </div>
+   <div class="jumbotron j1" id="rform">
+    <h2>REQUIREMENT FORM</h2>
+   
+     <div class="form-group">
+  <label for="user">Name</label>
+  <input type="text" name="user" class="form-control ">
+</div>
+<div class="form-group">
+  <label for="pass">Website name</label>
+  <input type="password" name="pass" class="form-control">
+</div>
+<div class="form-group">
+  <label for="obj">Objective </label>
+  <input type="textarea" name="obj" class="form-control">
+</div>
+<div class="form-group">
+  <label for="tusers">Target users</label>
+  <input type="textarea" name="tusers" class="form-control">
+</div>
+<div class="form-group">
+  <label for="add">Address</label>
+  <input type="textarea" name="add" class="form-control">
+</div>
+<div class="form-group">
+  <label for="ebug">Estimated Budget</label>
+  <input type="number" name="ebug" class="form-control">
+</div>
+<div class="form-group">
+  <form action="upload1.php" method="post" enctype="multipart/form-data">
+  <label for="fileToUpload">Upload template</label>
+  <input type="file" name="fileToUpload" class="form-control" id="fileToUpload">
+</form>
+</div>
+<div class="form-group">
+  
+  <button class="btn btn-success">submit</button> 
+</div>
+
+   </div>
+   <footer>
+     <a href="#myPage">
+    <span class="glyphicon glyphicon-chevron-up" style="margin-left: 500px"></span>
+  </a>
+   <p style="float: right;margin-right: 20px;margin-top: 10px;"><b>Designed By Mohamed Askar</b></p>
+   <p style="margin-top: 15px;float: left"><b>Support Us On</b></p>
+ <a href="www.facebook.com" style="float: left;margin-top: 10px"><img class="fimg" src="C:\Users\User\Desktop\DCIM\fb.jpeg"></a>
+ <a href="www.twitter.com" style="float: left;margin-top: 10px"><img class="fimg" src="C:\Users\User\Desktop\DCIM\twitter.jpeg"></a>
+   </footer>
+     
+   </div>
+ </body>
+  
